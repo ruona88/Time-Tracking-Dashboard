@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking Dashboard</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel = "stylesheet" type = "text/css" href = "mediaqueries.css" >
+</head>
+<body>
+    
+    <!--Container for the main project. To be centered-->
+    <main>
+        
+        <div class = "user-details">
+            <div class = "user-flexbox">
+                <div class = "user-image-container">
+                    <img src = "Assets/image-jeremy.png" alt = "" class = "user-image">
+                </div>
+                <div class = "user-info">
+                    <p>Report for</p>
+                    <p>Jeremy Robson</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "list-items">
+            <ol>
+                <li><a href = "#" class = "daily" >Daily</a></li>
+                <li><a href = "#" class = "weekly" >Weekly</a></li>
+                <li><a href = "#" class = "monthly" >Monthly</a></li>
+            </ol>
+        </div>
+
+        <div class = "work grid-item">
+            <div class = "top-flexbox">
+                <p>Work</p>
+                <div class = "three-dots">
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                </div>
+            </div>
+            <div class = "bottom-flexbox">
+                <p><span id = "work-current-hours"></span>hrs</p>
+                <p>Last Week - <span id = "work-previous-hours"></span>hrs</p>
+            </div>
+        </div>
+
+        <div class = "play grid-item">
+            <div class = "top-flexbox">
+                <p>Play</p>
+                <div class = "three-dots">
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                </div>
+            </div>
+            <div class = "bottom-flexbox">
+                <p><span id = "play-current-hours"></span>hrs</p>
+                <p>Last Week - <span id = "play-previous-hours"></span>hrs</p>
+            </div>
+        </div>
+
+        <div class = "study grid-item">
+            <div class = "top-flexbox">
+                <p>Study</p>
+                <div class = "three-dots">
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                </div>
+            </div>
+            <div class = "bottom-flexbox">
+                <p><span id = "study-current-hours"></span>hrs</p>
+                <p>Last Week - <span id = "study-previous-hours"></span>hrs</p>
+            </div>
+        </div>
+
+        <div class = "exercise grid-item">
+            <div class = "top-flexbox">
+                <p>Exercise</p>
+                <div class = "three-dots">
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                </div>
+            </div>
+            <div class = "bottom-flexbox">
+                <p><span id = "exercise-current-hours" ></span>hrs</p>
+                <p>Last Week - <span id = "exercise-previous-hours"></span>hrs</p>
+            </div>
+        </div>
+
+        <div class = "social grid-item">
+            <div class = "top-flexbox">
+                <p>Social</p>
+                <div class = "three-dots">
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                </div>
+            </div>
+            <div class = "bottom-flexbox">
+                <p><span id = "social-current-hours"></span>hrs</p>
+                <p>Last Week - <span id = "social-previous-hours"></span>hrs</p>
+            </div>
+        </div>
+
+        <div class = "self-care grid-item">
+            <div class = "top-flexbox">
+                <p>Self Care</p>
+                <div class = "three-dots">
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                    <span class = "dot"></span>
+                </div>
+            </div>
+            <div class = "bottom-flexbox">
+                <p><span id = "care-current-hours"></span>hrs</p>
+                <p>Last Week - <span id = "care-previous-hours" ></span>hrs</p>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+<script src = "script.js" ></script>
+</html>

@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/*
+'Rubik', sans-serif;
+weights: 300, 400, 500;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    max-width: 1440px;
+}
+
+main {
+    width: 70%;
+    height: 480px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Styling for the user-details div*/
+.user-details {
+    background-color: hsl(246, 80%, 60%);
+    grid-row: 1 / span 7;
+    grid-column: 1 / span 1;
+    border-radius: 15px;
+    padding: 30px 12% 60px 12%;
+    z-index: 1;
+}
+
+.user-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-image-container {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.user-image {
+    width: 100%;
+    height: 100%;
+}
+
+.user-details p:nth-of-type(1) {
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: hsl(236, 100%, 87%)
+}
+
+.user-details p:nth-of-type(2) {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/*Styling for the list-items div*/
+.list-items {
+    padding: 60px 12% 5px 12%;
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 4;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}  
+
+ol {
+    display: flex;
+    flex-direction: column;
+}
+
+ol li {
+    margin-bottom: 15px;
+    list-style-type: none;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: hsl(236, 100%, 87%);
+    transition: all 0.2s ease-in-out;
+}
+
+.active {
+    color: white;
+}
+
+/*Set grid rules for the other 6 grid items and the three dots and the before pseudo-class*/
+.work {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 5;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.work::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(15, 100%, 70%);
+    z-index: -1;
+    background-image: url("Assets/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+    background-size: 25%;
+}
+
+.play {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 5;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.play::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(195, 74%, 62%);
+    z-index: -1;
+    background-image: url("Assets/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+    background-size: 25%;
+}
+
+.study {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 5;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.study::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(348, 100%, 68%);
+    z-index: -1;
+    background-image: url("Assets/icon-study.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+    background-size: 25%;
+}
+
+.exercise {
+    grid-column: 2 / span 1;
+    grid-row: 6 / span 5;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.exercise::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(145, 58%, 55%);
+    z-index: -1;
+    background-image: url("Assets/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+    background-size: 25%;
+}
+
+.social {
+    grid-column: 3 / span 1;
+    grid-row: 6 / span 5;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.social::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(264, 64%, 52%);
+    z-index: -1;
+    background-image: url("Assets/icon-social.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+    background-size: 25%;
+}
+
+.self-care {
+    grid-column: 4 / span 1;
+    grid-row: 6 / span 5;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.self-care::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(43, 84%, 65%);
+    z-index: -1;
+    background-image: url("Assets/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-position: top 0px right 10px;
+    background-size: 25%;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: hsl(236, 100%, 87%);
+    display: inline-block;
+    cursor: pointer
+}
+
+.dot:hover {
+    background-color: white;
+}
+
+/*Styling for the content of the grid-items*/
+.grid-item {
+    padding: 25px 13% 20px 13%; 
+    background-color: hsl(235, 46%, 20%);
+    transition: all 0.15s ease-in-out;
+}
+
+.grid-item:hover {
+    background-color: hsl(235, 45%, 61%);
+}
+
+.top-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.top-details p {
+    font-weight: 500;
+}
+
+.bottom-flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom-flexbox P:nth-of-type(1) {
+    font-size: 2.1rem;
+    font-weight: 300;
+    margin-bottom: 17px;
+}
+
+.bottom-flexbox P:nth-of-type(2) {
+    font-size: 0.7rem;
+    color: hsl(236, 100%, 87%)
+}
+
+/*
+Media Queries
+*/
+
+@media only screen and (max-width: 1200px) {
+    
+   main {
+       width: 85%;
+   }
+
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+
+    html {
+       font-size: 27px;
+    }
+
+    body {
+        padding: 5% 0px;
+    }
+
+    main {
+        position: static;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 25px;
+        height: 95%;
+        width: 90%;
+    }
+
+    .user-details {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        height: 70%;
+    }
+
+    .user-details p:nth-of-type(2) {
+        font-size: 1.6rem;
+        
+    }
+
+    .user-flexbox {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .list-items {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    ol {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 170px 0% 5px 0%;
+    }
+
+    .work {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .play {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .study {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    .exercise {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+
+    .social {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+
+    .self-care {
+        grid-column: 1 / span 1;
+        grid-row: 7 / span 1;
+    }
+
+    .bottom-flexbox {
+        margin-top: 65px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bottom-flexbox P:nth-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    html {
+        font-size: 25px
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    html {
+        font-size: 13px;
+    }
+}
